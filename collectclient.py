@@ -30,6 +30,7 @@ class Collector:
     self.sender.connect("tcp://%s:%s"%(host,port))
 
   def write(self,data):
+    # note: this is in UTC
     message={"timestamp":int(time.time()),
       self.resource:self.id,
       "test":self.test,
